@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 section {
@@ -299,15 +300,84 @@ margin-bottom: 10px;
     padding:10px ;
 
 }
+.float{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(76, 209, 209);
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.float span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+}
+.float.active2 span{
+    transform: rotate(135deg);
+}
+.float ul{
+    position: absolute;
+    bottom: 55px;
+    min-width: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3 ;
+    background: rgb(65, 161, 121);
+}
+.float.active2 ul{
+    bottom: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3 ;
+}
+.float ul  li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+    color: #fff;
 
-
+}
+.float ul li a{
+    color: #fff;
+}
+.float ul li i{
+    color: #fff;
+    font-size: 1.8em;
+    margin-right: 12px;
+    opacity: 0.2;
+    transform: scale(0.8);
+}
+.float ul li:hover a i {
+    opacity: 0.8;
+}
+.float ul li a:hover {
+    font-weight: 700;
+}
+.float ul li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* Responsive */
 @media(max-width:991px){
 header,header.sticky{
     padding: 20px 50px;
     z-index: 1000;
-
 }
 
 .menu{
@@ -347,6 +417,9 @@ header ul li a{
     background-repeat: no-repeat;
     background-size:25px ;
     cursor: pointer;
+}
+.float{
+    z-index: 0;
 }
 header.sticky .toggle{
     filter: invert(1);
@@ -409,4 +482,18 @@ img{
         margin: 20px 0;
     }
     
+}
+@media(max-width:600px){
+    header,header.sticky{
+        padding: 20px 25px;
+        z-index: 1000;
+    
+    }
+    .banner{
+        padding: 150px 20px 100px;
+        
+    }
+    section{
+        padding: 100px 20px;
+    }
 }
