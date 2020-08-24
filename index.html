@@ -24,6 +24,16 @@
             <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
+    <div class="float" onclick="toggleMenu2()">
+        <span>+</span>
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100012941586671"><i class="fa fa-facebook"></i> Check out my fb</a></li>
+            <li><a href="https://www.instagram.com/rajshukla_1102/"><i class="fa fa-instagram"></i>Check out my Insta</a></li>
+            <li><a href="https://twitter.com/Rajshukla_1102"><i class="fa fa-twitter"></i>Check out my Twitter</a></li>
+            <li><a href="https://github.com/rajshukla1102"><i class="fa fa-github"></i>Check out my Github</a></li>
+        </ul>
+        </div>
+    </div>
     <section class="banner" id="home">
         <div class="textBx">
             <h2>Rishabh Raj Shukla</h2>
@@ -146,7 +156,9 @@
                         <div class="icon"> <i class="fa fa-map-marker"></i></div>
                         <div class="text">
                             <h3>Address</h3>
-                            <p>DY Patil institute of Technology,Pimpiri <br>Pune-411018<br>Mumbai</p>
+                            <p>DY Patil institute of Technology,Pimpiri
+                            <br>Pune-411018
+                            <br>Mumbai</p>
                         </div>
                     </div>
                     <div class="box">
@@ -200,8 +212,14 @@
         function toggleMenu(){
             let toggleM=document.querySelector(".toggle");
             let menu=document.querySelector(".menu");
+            
             toggleM.classList.toggle('active')
             menu.classList.toggle('active')
+            
+        }
+        function toggleMenu2(){
+            let float=document.querySelector(".float");
+            float.classList.toggle('active2')
         }
     </script>
 </body>
